@@ -5,7 +5,7 @@ import {StatusBar} from 'react-native';
 
 import Navigator from './Navigator';
 
-const App = () => {
+export default function App() {
   return (
     <>
       <StatusBar backgroundColor="#C8AB83" />
@@ -13,6 +13,4 @@ const App = () => {
       <Navigator />
     </>
   );
-};
-
-export default App;
+}
