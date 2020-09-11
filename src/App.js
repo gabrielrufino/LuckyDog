@@ -8,7 +8,7 @@ import Navigator from './Navigator';
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar backgroundColor="#C8AB83" />
 
       <Navigator />
     </>
