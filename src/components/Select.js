@@ -23,6 +23,7 @@ export default function Select({selected, options, onSelect}) {
         style={styles.picker}
         selectedValue={selected}
         onValueChange={onSelect}>
+        <Picker.Item label="Selecione um item" color="#999999" />
         {options.map((option, index) => (
           <Picker.Item key={index} label={option} value={option} />
         ))}

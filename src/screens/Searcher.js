@@ -54,11 +54,16 @@ export default function Searcher({navigation}) {
     [navigation, selectedBreed],
   );
 
-  const onImFeelingLucky = useCallback(function () {
-    DogAPI.get('/breeds/image/random').then(({data}) => {
-      console.log(data);
-    });
-  }, []);
+  const onImFeelingLucky = useCallback(
+    function () {
+      setSelectedBreed('');
+
+      DogAPI.get('/breeds/image/random').then(({data: {message}}) => {
+        navigation.navigate('Dog', {image: message});
+      });
+    },
+    [navigation],
+  );
 
   return (
     <View style={styles.container}>
