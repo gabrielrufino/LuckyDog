@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Searcher() {
+export default function Searcher({navigation}) {
   const [breeds, setBreeds] = useState([]);
   const [loadingBreeds, setLoadingBreeds] = useState(true);
   const [selectedBreed, setSelectedBreed] = useState('');
@@ -43,7 +43,22 @@ export default function Searcher() {
       });
   }, []);
 
-  const onRiffle = useCallback(function () {}, []);
+  const onRiffle = useCallback(
+    function () {
+      DogAPI.get(`/breed/${selectedBreed}/images/random`).then(
+        ({data: {message}}) => {
+          navigation.navigate('Dog', {image: message});
+        },
+      );
+    },
+    [navigation, selectedBreed],
+  );
+
+  const onImFeelingLucky = useCallback(function () {
+    DogAPI.get('/breeds/image/random').then(({data}) => {
+      console.log(data);
+    });
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -59,7 +74,7 @@ export default function Searcher() {
         />
         <View style={styles.spacer} />
         <Button label="Sortear" onPress={onRiffle} />
-        <Button flat label="Estou com sorte" onPress={onRiffle} />
+        <Button flat label="Estou com sorte" onPress={onImFeelingLucky} />
       </View>
     </View>
   );
