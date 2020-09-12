@@ -8,6 +8,7 @@ import Select from '../components/Select';
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#FFFFFF',
     flex: 1,
     padding: 20,
   },
