@@ -1,4 +1,7 @@
-# Lucky Dog
+<p align="center">
+  <img width="200px" src="./assets/logo.png">
+  <h1 align="center">Lucky Dog</h1>
+</p>
 
 ## Paleta de cores
 
