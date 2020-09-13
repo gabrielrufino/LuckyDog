@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 
 import Button from '../components/Button';
+import Divider from '../components/Divider';
 import DogAPI from '../services/DogAPI';
 import Logo from '../assets/images/logo-500px.png';
 import Select from '../components/Select';
@@ -57,11 +58,11 @@ export default function Searcher({navigation}) {
 
   const onRiffle = useCallback(
     function () {
-      DogAPI.get(`/breed/${selectedBreed}/images/random`).then(
-        ({data: {message}}) => {
-          navigation.navigate('Dog', {image: message});
-        },
-      );
+      DogAPI.get(
+        `/breed/${selectedBreed.toLocaleLowerCase()}/images/random`,
+      ).then(({data: {message}}) => {
+        navigation.navigate('Dog', {image: message});
+      });
     },
     [navigation, selectedBreed],
   );
@@ -93,6 +94,19 @@ export default function Searcher({navigation}) {
         <Button label="Sortear" onPress={onRiffle} />
         <Button flat label="Estou com sorte" onPress={onImFeelingLucky} />
       </View>
+
+      <Divider />
+
+      <Button
+        flat
+        label="Favoritos"
+        onPress={() => navigation.navigate('Favorites')}
+      />
+      <Button
+        flat
+        label="Histórico"
+        onPress={() => navigation.navigate('History')}
+      />
     </View>
   );
 }
