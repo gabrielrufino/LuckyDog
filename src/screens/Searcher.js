@@ -37,7 +37,18 @@ export default function Searcher({navigation}) {
   useEffect(() => {
     DogAPI.get('/breeds/list/all')
       .then(({data: {message}}) => {
-        setBreeds(Object.keys(message));
+        const processedBreeds = Object.keys(message).map((breed) => {
+          return breed
+            .split(' ')
+            .map(([first, ...rest]) =>
+              [first.toLocaleUpperCase(), ...rest].join(''),
+            )
+            .join(' ');
+        });
+
+        console.log(processedBreeds);
+
+        setBreeds(processedBreeds);
       })
       .finally(() => {
         setLoadingBreeds(false);
