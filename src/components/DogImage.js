@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 export default function DogImage({source}) {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={source} />
+      <Image style={styles.image} source={source} resizeMode="cover" />
     </View>
   );
 }
