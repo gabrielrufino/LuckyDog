@@ -11,7 +11,6 @@ Este app foi desenvolvido com propósitos didáticos para uma playlist do meu ca
 
 <p align="center">
   <img width="200px" src="./assets/opening-app.gif" alt="Abrindo o app">
-  <h1 align="center">Lucky Dog</h1>
 </p>
 
 ### Selecione uma raça e descubra quem é o sortudo
