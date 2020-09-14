@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 
 import Button from '../components/Button';
+import Divider from '../components/Divider';
 import DogAPI from '../services/DogAPI';
 import Logo from '../assets/images/logo-500px.png';
 import Select from '../components/Select';
@@ -34,23 +35,32 @@ export default function Searcher({navigation}) {
   const [loadingBreeds, setLoadingBreeds] = useState(true);
   const [selectedBreed, setSelectedBreed] = useState('');
 
-  useEffect(() => {
+  useEffect(function () {
     DogAPI.get('/breeds/list/all')
-      .then(({data: {message}}) => {
-        setBreeds(Object.keys(message));
+      .then(function ({data: {message}}) {
+        const processedBreeds = Object.keys(message).map(function (breed) {
+          return breed
+            .split(' ')
+            .map(([first, ...rest]) =>
+              [first.toLocaleUpperCase(), ...rest].join(''),
+            )
+            .join(' ');
+        });
+
+        setBreeds(processedBreeds);
       })
-      .finally(() => {
+      .finally(function () {
         setLoadingBreeds(false);
       });
   }, []);
 
   const onRiffle = useCallback(
     function () {
-      DogAPI.get(`/breed/${selectedBreed}/images/random`).then(
-        ({data: {message}}) => {
-          navigation.navigate('Dog', {image: message});
-        },
-      );
+      DogAPI.get(
+        `/breed/${selectedBreed.toLocaleLowerCase()}/images/random`,
+      ).then(function ({data: {message}}) {
+        navigation.navigate('Dog', {image: message});
+      });
     },
     [navigation, selectedBreed],
   );
@@ -59,7 +69,7 @@ export default function Searcher({navigation}) {
     function () {
       setSelectedBreed('');
 
-      DogAPI.get('/breeds/image/random').then(({data: {message}}) => {
+      DogAPI.get('/breeds/image/random').then(function ({data: {message}}) {
         navigation.navigate('Dog', {image: message});
       });
     },
@@ -82,6 +92,19 @@ export default function Searcher({navigation}) {
         <Button label="Sortear" onPress={onRiffle} />
         <Button flat label="Estou com sorte" onPress={onImFeelingLucky} />
       </View>
+
+      <Divider />
+
+      <Button
+        flat
+        label="Favoritos"
+        onPress={() => navigation.navigate('Favorites')}
+      />
+      <Button
+        flat
+        label="Histórico"
+        onPress={() => navigation.navigate('History')}
+      />
     </View>
   );
 }

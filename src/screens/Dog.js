@@ -1,7 +1,10 @@
-import React, {useCallback} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {StyleSheet, View} from 'react-native';
 
-import Button from '../components/Button';
+import DogImage from '../components/DogImage';
+import DownloadButton from '../components/DownloadButton';
+import FavoriteRepository from '../repositories/Favorite';
+import FavoriteButton from '../components/FavoriteButton';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,26 +21,59 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     height: '100%',
   },
+  actions: {
+    flexDirection: 'row',
+    marginTop: 10,
+  },
+  action: {
+    marginRight: 10,
+  },
 });
 
-export default function Searcher({route, navigation}) {
-  const onRiffleAnotherDog = useCallback(
+export default function Dog({route, navigation}) {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(
     function () {
-      navigation.navigate('Searcher');
+      FavoriteRepository.getByUri(route.params.image).then(function (favorite) {
+        if (favorite) {
+          setIsFavorite(true);
+        }
+      });
     },
-    [navigation],
+    [route.params.image],
   );
+
+  const onFavorite = useCallback(
+    function () {
+      if (!isFavorite) {
+        FavoriteRepository.insertOne({
+          uri: route.params.image,
+        }).then(function () {
+          setIsFavorite(true);
+        });
+      } else {
+        FavoriteRepository.removeByUri(route.params.image).then(function () {
+          setIsFavorite(false);
+        });
+      }
+    },
+    [isFavorite, route.params.image],
+  );
+
+  const onDownload = useCallback(function () {}, []);
 
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={{uri: route.params.image}} style={styles.image} />
+      <DogImage source={{uri: route.params.image}} />
+      <View style={styles.actions}>
+        <View style={styles.action}>
+          <FavoriteButton isFavorite={isFavorite} onPress={onFavorite} />
+        </View>
+        <View style={styles.action}>
+          <DownloadButton onPress={onDownload} />
+        </View>
       </View>
-      <Button
-        flat
-        label="Sortear outro cachorro"
-        onPress={onRiffleAnotherDog}
-      />
     </View>
   );
 }

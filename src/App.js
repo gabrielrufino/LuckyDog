@@ -7,7 +7,7 @@ import {StatusBar} from 'react-native';
 import Navigator from './Navigator';
 
 export default function App() {
-  useEffect(() => {
+  useEffect(function () {
     SplashScreen.hide();
   }, []);
 
