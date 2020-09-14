@@ -47,8 +47,6 @@ export default function Searcher({navigation}) {
             .join(' ');
         });
 
-        console.log(processedBreeds);
-
         setBreeds(processedBreeds);
       })
       .finally(() => {
