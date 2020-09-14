@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import GoBackButton from './GoBackButton';
 
@@ -20,9 +21,11 @@ const styles = StyleSheet.create({
 });
 
 export default function Header({title}) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <GoBackButton onPress={() => {}} />
+      <GoBackButton onPress={navigation.goBack} />
       <View style={styles.horizontalSpace} />
       <Text style={styles.title}>{title}</Text>
     </View>
