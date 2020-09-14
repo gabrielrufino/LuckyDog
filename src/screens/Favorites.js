@@ -1,5 +1,11 @@
 import React, {useCallback, useState, useEffect} from 'react';
-import {ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 import Button from '../components/Button';
 import DogImage from '../components/DogImage';
@@ -19,6 +25,9 @@ const styles = StyleSheet.create({
     height: '95%',
     paddingHorizontal: 10,
     width: 320,
+  },
+  emptyWarning: {
+    textAlign: 'center',
   },
 });
 
@@ -41,6 +50,12 @@ export default function Favorites({navigation}) {
   return (
     <View style={styles.container}>
       <Header title="Favoritos" />
+
+      {!favorites.length && (
+        <Text style={styles.emptyWarning}>
+          Você ainda não tem dogs favoritos
+        </Text>
+      )}
 
       <ScrollView contentContainerStyle={styles.scrollView} horizontal>
         {favorites.map((favorite) => (
