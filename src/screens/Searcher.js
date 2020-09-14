@@ -35,10 +35,10 @@ export default function Searcher({navigation}) {
   const [loadingBreeds, setLoadingBreeds] = useState(true);
   const [selectedBreed, setSelectedBreed] = useState('');
 
-  useEffect(() => {
+  useEffect(function () {
     DogAPI.get('/breeds/list/all')
-      .then(({data: {message}}) => {
-        const processedBreeds = Object.keys(message).map((breed) => {
+      .then(function ({data: {message}}) {
+        const processedBreeds = Object.keys(message).map(function (breed) {
           return breed
             .split(' ')
             .map(([first, ...rest]) =>
@@ -49,7 +49,7 @@ export default function Searcher({navigation}) {
 
         setBreeds(processedBreeds);
       })
-      .finally(() => {
+      .finally(function () {
         setLoadingBreeds(false);
       });
   }, []);
@@ -58,7 +58,7 @@ export default function Searcher({navigation}) {
     function () {
       DogAPI.get(
         `/breed/${selectedBreed.toLocaleLowerCase()}/images/random`,
-      ).then(({data: {message}}) => {
+      ).then(function ({data: {message}}) {
         navigation.navigate('Dog', {image: message});
       });
     },
@@ -69,7 +69,7 @@ export default function Searcher({navigation}) {
     function () {
       setSelectedBreed('');
 
-      DogAPI.get('/breeds/image/random').then(({data: {message}}) => {
+      DogAPI.get('/breeds/image/random').then(function ({data: {message}}) {
         navigation.navigate('Dog', {image: message});
       });
     },

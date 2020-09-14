@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
 export default function Favorites({navigation}) {
   const [favorites, setFavorites] = useState([]);
 
-  useEffect(() => {
-    FavoriteRepository.getAll().then((data) => {
+  useEffect(function () {
+    FavoriteRepository.getAll().then(function (data) {
       setFavorites(data);
     });
   });

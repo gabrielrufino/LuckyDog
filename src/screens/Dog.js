@@ -35,7 +35,7 @@ export default function Dog({route, navigation}) {
 
   useEffect(
     function () {
-      FavoriteRepository.getByUri(route.params.image).then((favorite) => {
+      FavoriteRepository.getByUri(route.params.image).then(function (favorite) {
         if (favorite) {
           setIsFavorite(true);
         }
@@ -49,7 +49,7 @@ export default function Dog({route, navigation}) {
       if (!isFavorite) {
         FavoriteRepository.insertOne({
           uri: route.params.image,
-        }).then(() => {
+        }).then(function () {
           setIsFavorite(true);
         });
       } else {
