@@ -10,7 +10,8 @@ Descubra quem são os dogs mais sortudos com esse app!
 Este app foi desenvolvido com propósitos didáticos para uma playlist do meu canal no youtube sobre **React Hooks**, mas fique a vontade pra se divertir com o app ou até mesmo contribuir!
 
 <p align="center">
-  <img width="200px" src="./assets/opening-app.gif" alt="Abrindo o app">
+  <img width="200px" src="./assets/opening-app.gif" alt="Abrindo o app" />
+  <img width="200px" src="./assets/riffling-by-breed.gif" alt="Sorteando por raça">
 </p>
 
 ### Selecione uma raça e descubra quem é o sortudo
