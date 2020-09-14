@@ -11,11 +11,31 @@ Este app foi desenvolvido com propósitos didáticos para uma playlist do meu ca
 
 <p align="center">
   <img width="200px" src="./assets/opening-app.gif" alt="Abrindo o app" />
-  <img width="200px" src="./assets/riffling-by-breed.gif" alt="Sorteando por raça">
 </p>
 
 ### Selecione uma raça e descubra quem é o sortudo
 
+Você pode escolher uma dentre as diversas raças e fazer o sorteio!
+
+<p align="center">
+  <img width="200px" src="./assets/riffling-by-breed.gif" alt="Sorteando por raça">
+</p>
+
+### Está se sentindo sortudo?
+
+É ousado o suficiente? Você não precisar escolher uma raça, clique em **Estou com sorte**. Sabe-se lá o que vai vir...
+
+<p align="center">
+  <img width="200px" src="./assets/i'm-feeling-lucky.gif" alt="Sorteando com o botão 'Estou com sorte'">
+</p>
+
+### Não precisa desapegar
+
+Se você amou o cachorro sorteado, não precisa desapegar! Basta favoritar na estrelinha.
+
+<p align="center">
+  <img width="200px" src="./assets/saving-dog.gif" alt="Favoritando um cachorro">
+</p>
 
 ## Paleta de cores
 
