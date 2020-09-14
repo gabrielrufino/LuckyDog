@@ -3,6 +3,17 @@
   <h1 align="center">Lucky Dog</h1>
 </p>
 
+Descubra quem são os dogs mais sortudos com esse app!
+
+#### Propósito
+
+Este app foi desenvolvido com propósitos didáticos para uma playlist do meu canal no youtube sobre **React Hooks**, mas fique a vontade pra se divertir com o app ou até mesmo contribuir!
+
+![Abrindo o app](./assets/opening-app.gif)
+
+### Selecione uma raça e descubra quem é o sortudo
+
+
 ## Paleta de cores
 
 * #CACAAA - Sage
