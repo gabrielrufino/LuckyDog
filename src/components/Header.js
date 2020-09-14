@@ -8,8 +8,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     flexDirection: 'row',
-    paddingHorizontal: 10,
-    paddingVertical: 10,
+    padding: 15,
   },
   horizontalSpace: {
     paddingHorizontal: 5,
