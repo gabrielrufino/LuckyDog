@@ -47,7 +47,7 @@ export default function Favorites({navigation}) {
     FavoriteRepository.getAll().then(function (data) {
       setFavorites(data);
     });
-  });
+  }, []);
 
   const onExpand = useCallback(
     function (favorite) {
