@@ -11,6 +11,7 @@ import Button from '../components/Button';
 import DogImage from '../components/DogImage';
 import FavoriteRepository from '../repositories/Favorite';
 import Header from '../components/Header';
+import useBreeds from '../hooks/useBreeds';
 
 const styles = StyleSheet.create({
   container: {
@@ -33,6 +34,11 @@ const styles = StyleSheet.create({
 
 export default function Favorites({navigation}) {
   const [favorites, setFavorites] = useState([]);
+  const {breeds} = useBreeds();
+
+  useEffect(() => {
+    console.log(breeds);
+  }, [breeds]);
 
   useEffect(function () {
     FavoriteRepository.getAll().then(function (data) {

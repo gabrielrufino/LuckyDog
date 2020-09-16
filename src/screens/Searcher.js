@@ -6,6 +6,7 @@ import Divider from '../components/Divider';
 import DogAPI from '../services/DogAPI';
 import Logo from '../assets/images/logo-500px.png';
 import Select from '../components/Select';
+import useBreeds from '../hooks/useBreeds';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,28 +32,8 @@ const styles = StyleSheet.create({
 });
 
 export default function Searcher({navigation}) {
-  const [breeds, setBreeds] = useState([]);
-  const [loadingBreeds, setLoadingBreeds] = useState(true);
   const [selectedBreed, setSelectedBreed] = useState('');
-
-  useEffect(function () {
-    DogAPI.get('/breeds/list/all')
-      .then(function ({data: {message}}) {
-        const processedBreeds = Object.keys(message).map(function (breed) {
-          return breed
-            .split(' ')
-            .map(([first, ...rest]) =>
-              [first.toLocaleUpperCase(), ...rest].join(''),
-            )
-            .join(' ');
-        });
-
-        setBreeds(processedBreeds);
-      })
-      .finally(function () {
-        setLoadingBreeds(false);
-      });
-  }, []);
+  const {breeds} = useBreeds();
 
   const onRiffle = useCallback(
     function () {
