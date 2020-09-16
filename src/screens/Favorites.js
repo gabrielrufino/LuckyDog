@@ -36,9 +36,12 @@ export default function Favorites({navigation}) {
   const [favorites, setFavorites] = useState([]);
   const {breeds} = useBreeds();
 
-  useEffect(() => {
-    console.log(breeds);
-  }, [breeds]);
+  useEffect(
+    function () {
+      console.log(breeds);
+    },
+    [breeds],
+  );
 
   useEffect(function () {
     FavoriteRepository.getAll().then(function (data) {
