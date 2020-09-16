@@ -79,12 +79,16 @@ export default function Searcher({navigation}) {
       <Button
         flat
         label="Favoritos"
-        onPress={() => navigation.navigate('Favorites')}
+        onPress={useCallback(() => navigation.navigate('Favorites'), [
+          navigation,
+        ])}
       />
       <Button
         flat
         label="Histórico"
-        onPress={() => navigation.navigate('History')}
+        onPress={useCallback(() => navigation.navigate('History'), [
+          navigation,
+        ])}
       />
     </View>
   );
