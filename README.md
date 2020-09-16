@@ -37,7 +37,32 @@ Se você amou o cachorro sorteado, não precisa desapegar! Basta favoritar na es
   <img width="200px" src="./assets/saving-dog.gif" alt="Favoritando um cachorro">
 </p>
 
-## Paleta de cores
+## Contribuindo
+
+Fique a vontade para contribuir com novas implementações ou com correções de bugs. Toda ajuda é bem vinda!
+
+### Setup do projeto
+
+Para clonar o repositório:
+
+```bash
+git clone https://github.com/gabrielrufino/LuckyDog
+cd LuckyDog
+```
+
+Para instalar as dependências:
+
+```bash
+npm install
+```
+
+### Dog API
+
+A API usada para a obtenção das imagens dos cachorros é a [Dog API](https://dog.ceo/dog-api/). Consulte a [documentação](https://dog.ceo/dog-api/documentation/) para mais detalhes.
+
+### Identidade visual
+
+#### Paleta de cores
 
 * #CACAAA - Sage
 * #EEC584 - Gold Crayola
@@ -46,3 +71,13 @@ Se você amou o cachorro sorteado, não precisa desapegar! Basta favoritar na es
 * #7F636E - Old Lavender
 
 Link: https://coolors.co/cacaaa-eec584-c8ab83-55868c-7f636e
+
+### Encontrou algum bug?
+
+Você pode:
+
+* Cadastrar uma issue com detalhes do bug que você encontrou, ou... 
+* Tentar resolvê-lo :D
+
+Desde já, agradecemos toda e qualquer colaboração!
+
