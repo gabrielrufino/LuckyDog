@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screens/History Should renders the history screen correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "padding": 15,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#C8AB83",
+              "fontSize": 25,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 5,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#C8AB83",
+          "fontSize": 25,
+        }
+      }
+    >
+      Histórico
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "paddingHorizontal": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Histórico ainda não desenvolvido :( Mas não desanime, não vamos desenvolver!
+  </Text>
+</View>
+`;
