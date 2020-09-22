@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screens/Favorites Should renders the favorites screen correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "padding": 15,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#C8AB83",
+              "fontSize": 25,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 5,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#C8AB83",
+          "fontSize": 25,
+        }
+      }
+    >
+      Favoritos
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Você ainda não tem dogs favoritos
+  </Text>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "justifyContent": "center",
+        "marginTop": 10,
+      }
+    }
+    horizontal={true}
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;
