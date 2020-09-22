@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Divider.js Should renders the default divider correctly 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomWidth": 1,
+      "borderColor": "#CACAAA",
+      "borderRightWidth": 0,
+    }
+  }
+/>
+`;
+
+exports[`components/Divider.js Should renders the divider with vertical direction correctly 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomWidth": 0,
+      "borderColor": "#CACAAA",
+      "borderRightWidth": 1,
+    }
+  }
+/>
+`;

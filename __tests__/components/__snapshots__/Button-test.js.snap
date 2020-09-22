@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Button.js Should renders the default button correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#C8AB83",
+      "borderRadius": 5,
+      "justifyContent": "center",
+      "paddingVertical": 14,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFFFFF",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Button label
+  </Text>
+</View>
+`;
+
+exports[`components/Button.js Should renders the flat button correctly 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 5,
+      "justifyContent": "center",
+      "paddingVertical": 14,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#C8AB83",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Button label
+  </Text>
+</View>
+`;
+
+exports[`components/Button.js Should renders the outlined button correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#C8AB83",
+      "borderRadius": 5,
+      "borderWidth": 2,
+      "justifyContent": "center",
+      "paddingVertical": 14,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#C8AB83",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Button label
+  </Text>
+</View>
+`;

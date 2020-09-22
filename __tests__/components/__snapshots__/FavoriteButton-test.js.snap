@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/FavoriteButton.js Should renders the favorite-button correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "color": "#EEC584",
+        "fontSize": 30,
+      },
+      undefined,
+      Object {
+        "fontFamily": "FontAwesome5Free-Regular",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {
+        "fontWeight": "400",
+      },
+    ]
+  }
+>
+  
+</Text>
+`;
