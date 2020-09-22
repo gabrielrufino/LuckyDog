@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Select.js Should renders the select correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#CACAAA",
+      "borderRadius": 5,
+      "borderWidth": 2,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <RNCPicker
+      items={
+        Array [
+          Object {
+            "label": "Selecione um item",
+            "textColor": 4288256409,
+            "value": undefined,
+          },
+          Object {
+            "label": "Option 1",
+            "textColor": undefined,
+            "value": "Option 1",
+          },
+          Object {
+            "label": "Option 2",
+            "textColor": undefined,
+            "value": "Option 2",
+          },
+          Object {
+            "label": "Option 3",
+            "textColor": undefined,
+            "value": "Option 3",
+          },
+        ]
+      }
+      onChange={[Function]}
+      selectedIndex={1}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
