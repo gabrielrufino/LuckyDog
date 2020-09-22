@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/DogImage.js Should render the DogImage correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#CACAAA",
+      "borderColor": "#C8AB83",
+      "borderRadius": 4,
+      "borderWidth": 4,
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    resizeMode="cover"
+    source={
+      Object {
+        "uri": "https://images.dog.ceo//breeds//terrier-toy//n02087046_4455.jpg",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 4,
+        "height": "100%",
+      }
+    }
+  />
+</View>
+`;
