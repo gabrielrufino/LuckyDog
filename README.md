@@ -1,6 +1,7 @@
 <p align="center">
   <img width="200px" src="./assets/logo.png">
   <h1 align="center">Lucky Dog</h1>
+  <img src="https://github.com/gabrielrufino/LuckyDog/workflows/Tests%20runner/badge.svg?branch=master" />
 </p>
 
 Descubra quem são os dogs mais sortudos com esse app!
