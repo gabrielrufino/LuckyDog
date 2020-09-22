@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screens/Searcher.js Should renders the search screen correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
+        style={
+          Object {
+            "height": 150,
+            "width": 150,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "paddingVertical": 5,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#CACAAA",
+          "borderRadius": 5,
+          "borderWidth": 2,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <RNCPicker
+          items={
+            Array [
+              Object {
+                "label": "Selecione um item",
+                "textColor": 4288256409,
+                "value": undefined,
+              },
+            ]
+          }
+          onChange={[Function]}
+          selectedIndex={0}
+          style={
+            Array [
+              Object {
+                "height": 216,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingVertical": 5,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#C8AB83",
+          "borderRadius": 5,
+          "justifyContent": "center",
+          "paddingVertical": 14,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Sortear
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 5,
+          "justifyContent": "center",
+          "paddingVertical": 14,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#C8AB83",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Estou com sorte
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#CACAAA",
+        "borderRightWidth": 0,
+      }
+    }
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 5,
+        "justifyContent": "center",
+        "paddingVertical": 14,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#C8AB83",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Favoritos
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 5,
+        "justifyContent": "center",
+        "paddingVertical": 14,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#C8AB83",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Histórico
+    </Text>
+  </View>
+</View>
+`;
