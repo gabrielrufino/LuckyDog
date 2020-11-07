@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 
-import React, {useEffect} from 'react';
+import React, {StrictMode, useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
 import {StatusBar} from 'react-native';
 
@@ -12,10 +12,10 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <StrictMode>
       <StatusBar backgroundColor="#C8AB83" />
 
       <Navigator />
-    </>
+    </StrictMode>
   );
 }
